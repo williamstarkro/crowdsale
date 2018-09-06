@@ -6,4 +6,4 @@ To run:
  - Make sure ganache-cli is initialized in another window/tab in the terminal
  - run truffle test
 
- This will go through all test cases pushing what the crowdsale model can do
+ This will go through all test cases pushing what the crowdsale model can do, including refunds, withdraw limits, and voting consensus
