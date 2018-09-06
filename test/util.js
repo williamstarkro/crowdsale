@@ -22,7 +22,7 @@ function createProject(Project, token, creator) {
 async function assertBalance(token, addr, targetBalance, msg) {
   var balance = await token.balanceOf.call(addr);
   if(!msg) {
-      msg = targetBalance.toExponential()+ " should have been in account "+addr.toString(16);
+      msg = targetBalance.toExponential()+" should have been in account "+addr.toString(16);
   }
   if(typeof targetBalance == "object") {
       // targetBalance better be a BigNumber!

@@ -29,7 +29,7 @@ contract('FailRefundTest', function(accounts) {
     });
 
     it("Test refund", async function() {
-        await u.assertBalance(token, backer, 0, "Backer already spent token");
+        await u.assertBalance(token, backer, 0, "Backer already spent tokens");
 
         await project.withdrawRefund({from: backer});
         await u.assertBalance(token, backer, backerBalance, "Backer did not receive refund");

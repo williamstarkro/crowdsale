@@ -49,7 +49,7 @@ contract('SimpleToken', function(accounts) {
 
       await token.approve(backer1, amount, {from: owner});
       let allowance = await token.allowance.call(owner, backer1);
-      assert.equal(allowance.valueOf(), amount, "Allowance not updated by calls to approve");
+      assert.equal(allowance.valueOf(), amount, "Allowance not updated by call to approve");
 
       await token.transferFrom(owner, creator, amount, {from: backer1});
       
